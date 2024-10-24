@@ -9,137 +9,2244 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    
+    
+        <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-select/bootstrap-select.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/icofont/icofont.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-ui/jquery-ui.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/jarallax/jarallax.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.pips.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/tiny-slider/tiny-slider.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/tolak-icons/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel/css/owl.carousel.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/vendors/owl-carousel/css/owl.theme.default.min.css') }}" />
+
+        <!-- template styles -->
+        <link rel="stylesheet" href="{{ asset('assets/css/tolak.css') }}" />
 
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased font-sans">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <livewire:welcome.navigation />
-                        @endif
-                    </header>
+    <body class="custom-cursor">
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+        <div class="custom-cursor__cursor"></div>
+        <div class="custom-cursor__cursor-two"></div>
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+        <div class="preloader">
+            <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+        </div>
+        <!-- /.preloader -->
+        <div class="page-wrapper">
+            <div class="topbar-one">
+                <div class="container">
+                    <div class="topbar-one__inner">
+                        <ul class="list-unstyled topbar-one__info">
+                            <li class="topbar-one__info__item">
+                                <i class="fas fa-envelope topbar-one__info__icon"></i>
+                                <a href="mailto:demo@example.com">demo@example.com</a>
+                            </li>
+                            <li class="topbar-one__info__item">
+                                <i class="fas fa-map-marker-alt topbar-one__info__icon"></i>
+                                <a href="https://www.google.com/maps">27, Dhaka London City, LOT</a>
+                            </li>
+                        </ul><!-- /.list-unstyled topbar-one__info -->
+                        <ul class="topbar-one__links">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="contact.html">Register</a></li>
+                            <li><a href="services.html">Service</a></li>
+                        </ul><!-- /.topbar-one__links -->
+                    </div><!-- /.topbar-one__inner -->
+                </div><!-- /.container-fluid -->
+            </div><!-- /.topbar-one -->
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+            <header class="main-header sticky-header sticky-header--normal">
+                <div class="container-fluid">
+                    <div class="main-header__inner">
+                        <div class="main-header__logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo-dark.png" alt="Tolak HTML" width="184">
+                            </a>
+                        </div><!-- /.main-header__logo -->
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+
+
+                                <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
+                                    <a href="index.html">Demos</a>
+                                    <ul>
+                                        <li>
+                                            <div class="megamenu-popup">
+                                                <a href="#" class="megamenu-clickable--close"><span class="icon-close"></span></a>
+                                                <!-- /.megamenu-clickable--close -->
+                                                <div class="megamenu-popup__content">
+                                                    <div class="demo-one">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-5.jpg" alt="tolak">
+                                                                            <span class="demo-one__image__new">New</span>
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-5.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-5-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-5.html">Home Page 05</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-6.jpg" alt="tolak">
+                                                                            <span class="demo-one__image__new">New</span>
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-6.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-6-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-6.html">Home Page 06</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-7.jpg" alt="tolak">
+                                                                            <span class="demo-one__image__new">New</span>
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-7.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-7-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-7.html">Home Page 07</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-1.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-dark.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Dark Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index.html">Home Page 01</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-2.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-2.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-2-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-2-dark.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Dark Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-2.html">Home Page 02</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-3.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-3.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-3-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-3-dark.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Dark Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-3.html">Home Page 03</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-4.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-4.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Multi Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-4-one-page.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>One Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                                <a href="index-4-dark.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>Dark Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-4.html">Home Page 04</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-boxed.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-boxed.html" class="tolak-btn demo-one__btn">
+                                                                                    <b>View Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-boxed.html">Home Boxed</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                                <div class="col-md-6 col-lg-4">
+                                                                    <div class="demo-one__card">
+                                                                        <div class="demo-one__image">
+                                                                            <img src="assets/images/landing/home-rtl.jpg" alt="tolak">
+                                                                            <div class="demo-one__btns">
+                                                                                <a href="index-rtl.html#googtrans(en|ar)" class="tolak-btn demo-one__btn">
+                                                                                    <b>View Page</b><span></span>
+                                                                                </a><!-- /.thm-btn demo-one__btn -->
+                                                                            </div><!-- /.demo-one__btns -->
+                                                                        </div><!-- /.demo-one__image -->
+                                                                        <div class="demo-one__content">
+                                                                            <h3 class="demo-one__title">
+                                                                                <a href="index-rtl.html#googtrans(en|ar)">Home RTL</a>
+                                                                            </h3><!-- /.demo-one__title -->
+                                                                        </div><!-- /.demo-one__content -->
+                                                                    </div><!-- /.demo-one__card -->
+                                                                </div><!-- /.col-md-6 col-lg-3 -->
+                                                            </div><!-- /.row -->
+                                                        </div><!-- /.container -->
+                                                    </div><!-- /.demos-one -->
+                                                </div><!-- /.megamenu-popup__content -->
+                                            </div><!-- /.megamenu-popup -->
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Pages</a>
+                                    <ul>
+                                        <li>
+                                            <a href="project.html">Our Project</a>
+                                            <ul>
+                                                <li><a href="project.html">Project Page</a></li>
+                                                <li><a href="project-carousel.html">Project Carousel</a></li>
+                                                <li><a href="project-details.html">Project Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="team.html">Our Team</a></li>
+                                        <li><a href="team-carousel.html">Team Carousel</a></li>
+                                        <li><a href="team-details.html">Team Details</a></li>
+                                        <li><a href="reviews.html">Testimonial</a></li>
+                                        <li><a href="reviews-carousel.html">Testimonial Carousel</a></li>
+                                        <li><a href="packages.html">Pricing Page</a></li>
+                                        <li><a href="packages-carousel.html">Pricing Carousel</a></li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                            <ul>
+                                                <li><a href="gallery.html">Gallery Masonry</a></li>
+                                                <li><a href="gallery-filter.html">Gallery Filter</a></li>
+                                                <li><a href="gallery-grid.html">Gallery Grid</a></li>
+                                                <li><a href="gallery-carousel.html">Gallery Carousel</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="404.html">404 Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Services</a>
+                                    <ul>
+                                        <li><a href="services.html">Services One</a></li>
+                                        <li><a href="services-carousel.html">Services One Carousel</a></li>
+                                        <li><a href="services-two.html">Services Two</a></li>
+                                        <li><a href="services-two-carousel.html">Services Two Carousel</a></li>
+                                        <li><a href="business-growth.html">Business of Growth</a></li>
+                                        <li><a href="business-solution.html">Solution to Business</a></li>
+                                        <li><a href="marketing-solution.html">Markting of Solution</a></li>
+                                        <li><a href="technology-services.html">Technology Services</a></li>
+                                        <li><a href="business-marketing.html">Marketing Business</a></li>
+                                        <li><a href="business-support.html">Support of Business</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li class="dropdown">
+                                            <a href="#">Products</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="products.html">No Sidebar</a></li>
+                                                <li><a href="products-left.html">Left Sidebar</a></li>
+                                                <li><a href="products-right.html">Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="products-carousel.html">Products Carousel</a></li>
+                                        <li><a href="product-details.html">Product Details</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">News</a>
+                                    <ul class="sub-menu">
+                                        <li class="dropdown">
+                                            <a href="#">News Grid</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-grid.html">No Sidebar</a></li>
+                                                <li><a href="blog-grid-left.html">Left Sidebar</a></li>
+                                                <li><a href="blog-grid-right.html">Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">News List</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-list.html">No Sidebar</a></li>
+                                                <li><a href="blog-list-left.html">Left Sidebar</a></li>
+                                                <li><a href="blog-list-right.html">Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog-carousel.html">News Carousel</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">News Details</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-details.html">No Sidebar</a></li>
+                                                <li><a href="blog-details-left.html">Left Sidebar</a></li>
+                                                <li><a href="blog-details-right.html">Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                                <li class="dot"></li>
+                            </ul>
+                        </nav><!-- /.main-header__nav -->
+                        <div class="main-header__right">
+                            <div class="mobile-nav__btn mobile-nav__toggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!-- /.mobile-nav__toggler -->
+                            <a href="#" class="search-toggler main-header__search">
+                                <i class="icon-magnifying-glass" aria-hidden="true"></i>
+                                <span class="sr-only">Search</span>
+                            </a><!-- /.search-toggler -->
+                            <a href="cart.html" class="main-header__cart">
+                                <i class="icon-shopping-cart" aria-hidden="true"></i>
+                                <span class="sr-only">Search</span>
+                            </a><!-- /.search-toggler -->
+                            <a href="#" class="main-header__toggler">
+                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="contact.html" class="tolak-btn main-header__btn">
+                                <b>Discover More</b><span></span>
+                            </a><!-- /.thm-btn main-header__btn -->
+                        </div><!-- /.main-header__right -->
+                    </div><!-- /.main-header__inner -->
+                </div><!-- /.container-fluid -->
+            </header><!-- /.main-header -->
+            <!-- main-slider-start -->
+            <section class="main-slider-one">
+                <div class="main-slider-one__carousel tolak-owl__carousel owl-carousel" data-owl-options='{
+            "loop": true,
+            "animateOut": "fadeOut",
+            "animateIn": "fadeIn",
+            "items": 1,
+            "autoplay": true,
+            "autoplayTimeout": 7000,
+            "smartSpeed": 1000,
+            "nav": false,
+            "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
+            "dots": true,
+            "margin": 0
+            }'>
+                    <div class="item">
+                        <div class="main-slider-one__item">
+                            <div class="main-slider-one__shape tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+                                <img src="assets/images/shapes/slider-1-shape-1.png" alt="tolak">
+                            </div>
+                            <div class="main-slider-one__bg" style="background-image: url(assets/images/backgrounds/slider-1-1.jpg);"></div>
+                            <svg class="main-slider-one__bg-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect class='circle0 steap' x="5.2%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle1 steap' x="15.6%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle2 steap' x="26%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle3 steap' x="36.4%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle4 steap' x="46.8%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle5 steap' x="57%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle6 steap' x="67.7%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle7 steap' x="78.1%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle8 steap' x="88.5%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle9 steap' x="100%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                            </svg>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-slider-one__content">
+                                            <h5 class="main-slider-one__sub-title">Wellcome To It-Solution !</h5><!-- slider-sub-title -->
+                                            <h2 class="main-slider-one__title">Get Our Business<br> This It Soluti<span>o</span>n</h2><!-- slider-title -->
+                                            <div class="main-slider-one__text">
+                                                <p class="main-slider-one__text__one">Business a soluion and emirate in the Arab known <br>for luxury city for Company.</p>
+                                            </div><!-- slider-text -->
+                                            <div class="main-slider-one__bottom">
+                                                <div class="main-slider-one__btn">
+                                                    <a href="services.html" class="tolak-btn tolak-btn--base"><b>Contact Now</b><span></span></a><!-- slider-btn -->
+                                                </div>
+                                                <div class="main-slider-one__social">
+                                                    <a href="https://facebook.com">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                        <span class="sr-only">Facebook</span>
+                                                    </a>
+                                                    <a href="https://pinterest.com">
+                                                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                        <span class="sr-only">Pinterest</span>
+                                                    </a>
+                                                    <a href="https://twitter.com">
+                                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                        <span class="sr-only">Twitter</span>
+                                                    </a>
+                                                    <a href="https://instagram.com">
+                                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                        <span class="sr-only">Instagram</span>
+                                                    </a>
+                                                </div><!-- slider-social -->
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
                                 </div>
-                            </a>
-
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
+                            </div>
+                            <div class="main-slider-one__floating-text">Tolak</div>
+                        </div>
+                    </div><!-- item -->
+                    <div class="item">
+                        <div class="main-slider-one__item">
+                            <div class="main-slider-one__shape tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+                                <img src="assets/images/shapes/slider-1-shape-1.png" alt="tolak">
+                            </div>
+                            <div class="main-slider-one__bg" style="background-image: url(assets/images/backgrounds/slider-1-2.jpg);"></div>
+                            <svg class="main-slider-one__bg-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect class='circle0 steap' x="5.2%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle1 steap' x="15.6%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle2 steap' x="26%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle3 steap' x="36.4%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle4 steap' x="46.8%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle5 steap' x="57%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle6 steap' x="67.7%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle7 steap' x="78.1%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle8 steap' x="88.5%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle9 steap' x="100%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                            </svg>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-slider-one__content">
+                                            <h5 class="main-slider-one__sub-title">Wellcome To It-Solution !</h5><!-- slider-sub-title -->
+                                            <h2 class="main-slider-one__title">Get Our Business<br> This It Soluti<span>o</span>n</h2><!-- slider-title -->
+                                            <div class="main-slider-one__text">
+                                                <p class="main-slider-one__text__one">Business a soluion and emirate in the Arab known <br>for luxury city for Company.</p>
+                                            </div><!-- slider-text -->
+                                            <div class="main-slider-one__bottom">
+                                                <div class="main-slider-one__btn">
+                                                    <a href="services.html" class="tolak-btn tolak-btn--base"><b>Contact Now</b><span></span></a><!-- slider-btn -->
+                                                </div>
+                                                <div class="main-slider-one__social">
+                                                    <a href="https://facebook.com">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                        <span class="sr-only">Facebook</span>
+                                                    </a>
+                                                    <a href="https://pinterest.com">
+                                                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                        <span class="sr-only">Pinterest</span>
+                                                    </a>
+                                                    <a href="https://twitter.com">
+                                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                        <span class="sr-only">Twitter</span>
+                                                    </a>
+                                                    <a href="https://instagram.com">
+                                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                        <span class="sr-only">Instagram</span>
+                                                    </a>
+                                                </div><!-- slider-social -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
+                            </div>
+                            <div class="main-slider-one__floating-text">Tolak</div>
+                        </div>
+                    </div><!-- item -->
+                    <div class="item">
+                        <div class="main-slider-one__item">
+                            <div class="main-slider-one__shape tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+                                <img src="assets/images/shapes/slider-1-shape-1.png" alt="tolak">
+                            </div>
+                            <div class="main-slider-one__bg" style="background-image: url(assets/images/backgrounds/slider-1-3.jpg);"></div>
+                            <svg class="main-slider-one__bg-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect class='circle0 steap' x="5.2%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle1 steap' x="15.6%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle2 steap' x="26%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle3 steap' x="36.4%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle4 steap' x="46.8%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle5 steap' x="57%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle6 steap' x="67.7%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle7 steap' x="78.1%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle8 steap' x="88.5%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                                <rect class='circle9 steap' x="100%" y="0" rx="0" ry="0" width="100%" height="100%" />
+                            </svg>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-slider-one__content">
+                                            <h5 class="main-slider-one__sub-title">Wellcome To It-Solution !</h5><!-- slider-sub-title -->
+                                            <h2 class="main-slider-one__title">Get Our Business<br> This It Soluti<span>o</span>n</h2><!-- slider-title -->
+                                            <div class="main-slider-one__text">
+                                                <p class="main-slider-one__text__one">Business a soluion and emirate in the Arab known <br>for luxury city for Company.</p>
+                                            </div><!-- slider-text -->
+                                            <div class="main-slider-one__bottom">
+                                                <div class="main-slider-one__btn">
+                                                    <a href="services.html" class="tolak-btn tolak-btn--base"><b>Contact Now</b><span></span></a><!-- slider-btn -->
+                                                </div>
+                                                <div class="main-slider-one__social">
+                                                    <a href="https://facebook.com">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                        <span class="sr-only">Facebook</span>
+                                                    </a>
+                                                    <a href="https://pinterest.com">
+                                                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                        <span class="sr-only">Pinterest</span>
+                                                    </a>
+                                                    <a href="https://twitter.com">
+                                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                        <span class="sr-only">Twitter</span>
+                                                    </a>
+                                                    <a href="https://instagram.com">
+                                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                        <span class="sr-only">Instagram</span>
+                                                    </a>
+                                                </div><!-- slider-social -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="main-slider-one__floating-text">Tolak</div>
+                        </div>
+                    </div><!-- item -->
+                </div>
+                <div class="main-slider-one__project wow fadeInUp" data-wow-delay="200ms">
+                    <div class="main-slider-one__project__icon"><span class="icon-check-mark"></span></div>
+                    <h5 class="main-slider-one__project__number count-box"><span class="count-text" data-stop="1283" data-speed="1500"></span>k+</h5>
+                    <p class="main-slider-one__project__title">Complete Projects</p>
+                </div><!-- slider-fact -->
+            </section>
+            <!-- main-slider-end -->
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
+            <!-- Feature Start -->
+            <section class="feature-one">
+                <div class="feature-one__bg"></div>
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our Company Status<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">The Success of our Solution</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="row gutter-y-30">
+                        <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="00ms">
+                            <div class="feature-one__item text-center">
+                                <div class="feature-one__item__number"></div>
+                                <div class="feature-one__item__icon">
+                                    <span class="icon-social-care"></span>
                                 </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
+                                <h4 class="feature-one__item__title">IT Consulting</h4>
+                                <p class="feature-one__item__text">Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <div class="feature-one__item__arrow" style="background-image: url(assets/images/shapes/feature-1-shape-1.png);"></div>
+                            </div><!-- feature-item -->
+                        </div>
+                        <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="feature-one__item text-center">
+                                <div class="feature-one__item__number"></div>
+                                <div class="feature-one__item__icon">
+                                    <span class="icon-note-pad"></span>
                                 </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
+                                <h4 class="feature-one__item__title">Leadership Work</h4>
+                                <p class="feature-one__item__text">Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <div class="feature-one__item__arrow feature-one__item__arrow--sm-hide" style="background-image: url(assets/images/shapes/feature-1-shape-2.png);"></div>
+                            </div><!-- feature-item -->
+                        </div>
+                        <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="feature-one__item text-center">
+                                <div class="feature-one__item__number"></div>
+                                <div class="feature-one__item__icon">
+                                    <span class="icon-advertisement"></span>
                                 </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
+                                <h4 class="feature-one__item__title">Solution Business</h4>
+                                <p class="feature-one__item__text">Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <div class="feature-one__item__arrow" style="background-image: url(assets/images/shapes/feature-1-shape-1.png);"></div>
+                            </div><!-- feature-item -->
+                        </div>
+                        <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="feature-one__item text-center">
+                                <div class="feature-one__item__number"></div>
+                                <div class="feature-one__item__icon">
+                                    <span class="icon-trophy"></span>
+                                </div>
+                                <h4 class="feature-one__item__title">Business Winner</h4>
+                                <p class="feature-one__item__text">Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div><!-- feature-item -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Feature End -->
+            <!-- CTA Start -->
+            <section class="cta-one">
+                <div class="cta-one__bg">
+                    <div class="cta-one__bg__shape-left" style="background-image: url(assets/images/shapes/cta-shape-1.png);"></div>
+                    <div class="cta-one__bg__shape" style="background-image: url(assets/images/shapes/cta-bg-1.png);"></div>
+                </div>
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 wow fadeInLeft" data-wow-delay="100ms">
+                            <div class="cta-one__image">
+                                <img src="assets/images/resources/cta-1-1.jpg" alt="tolak">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="cta-one__content">
+                                <div class="cta-one__box">
+                                    <div class="cta-one__box__icon"><span class="icon-best-price"></span></div>
+                                    <h3 class="cta-one__box__title">Solution System Design</h3>
+                                    <p class="cta-one__box__text">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
+                                </div>
+                                <div class="cta-one__author">
+                                    <img src="assets/images/resources/cta-1-author-1.jpg" alt="tolak">
+                                    <img src="assets/images/resources/cta-1-author-2.jpg" alt="tolak">
+                                    <img src="assets/images/resources/cta-1-author-3.jpg" alt="tolak">
+                                    <a class="cta-one__author__rm" href="contact.html">More <span class="fas fa-arrow-right"></span></a>
+                                </div>
+                                <p class="cta-one__content__text">29,0000 customers with our services <a href="contact.html">( Let’s Started )</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CTA End -->
+            <!-- Service Start -->
+            <section class="service-one">
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our Best Service<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">We Kinds of Services Business</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="row gutter-y-30">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-1.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-cooperation"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="business-growth.html">Business of Growth</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="business-growth.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="150ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-2.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-ads-campaign"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="business-solution.html">Solution to Business</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="business-solution.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-3.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-headhunter"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="marketing-solution.html">Markting of Solution</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="marketing-solution.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="250ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-4.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-agency"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="technology-services.html">Technology Services</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="technology-services.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-5.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-advertisig-agency"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="business-marketing.html">Marketing Business</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="business-marketing.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="350ms">
+                            <div class="service-one__item text-center">
+                                <div class="service-one__item__image">
+                                    <img src="assets/images/resources/service-1-6.jpg" alt="tolak">
+                                </div>
+                                <div class="service-one__item__content">
+                                    <div class="service-one__item__icon">
+                                        <span class="icon-management"></span>
+                                    </div><!-- /.service-icon -->
+                                    <h3 class="service-one__item__title">
+                                        <a href="business-support.html">Support of Business</a>
+                                    </h3><!-- /.service-title -->
+                                    <p class="service-one__item__text">
+                                        We businesss standard chunk of Ipsum used since is Agency & Star tup.
+                                    </p><!-- /.service-text -->
+                                </div>
+                                <div class="service-one__item__bottom">
+                                    <div class="service-one__item__bottom__number"></div>
+                                    <a class="service-one__item__bottom__rm" href="business-support.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div><!-- /.service-card-one -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Service End -->
+            <section class="about-one">
+                <div class="about-one__bg" style="background-image: url(assets/images/shapes/about-bg-1.jpg);"></div>
+                <div class="about-one__shape" style="background-image: url(assets/images/shapes/about-1-shape-1.png);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 wow fadeInLeft" data-wow-delay="300ms">
+                            <div class="about-one__content">
+                                <div class="sec-title text-left">
+                                    <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span> Our About Now<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                                    <h3 class="sec-title__title">We Can Clients with the<br> About Services</h3><!-- /.sec-title__title -->
+                                </div><!-- /.sec-title -->
+                                <p class="about-one__content__text">
+                                    Business tailored it design, management & support services<br> business agency elit, sed do eiusmod tempor.
+                                </p>
+                                <ul class="about-one__content__list">
+                                    <li><span class="icofont-checked"></span>
+                                        <p>Business onstructivism.</p>
+                                    </li>
+                                    <li><span class="icofont-checked"></span>
+                                        <p>We give management</p>
+                                    </li>
+                                    <li><span class="icofont-checked"></span>
+                                        <p>Media in this solution.</p>
+                                    </li>
+                                    <li><span class="icofont-checked"></span>
+                                        <p>Business onstructivism.</p>
+                                    </li>
+                                    <li><span class="icofont-checked"></span>
+                                        <p>We give management</p>
+                                    </li>
+                                    <li><span class="icofont-checked"></span>
+                                        <p>Media in this solution.</p>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="about-one__content__btn">
+                                    <a href="about.html" class="tolak-btn"><b>About More</b><span></span></a>
+                                    <h5 class="about-one__content__btn__text">Watching video</h5>
+                                    <img class="about-one__content__btn__arrow" src="assets/images/shapes/arrow.png" alt="tolak">
+                                </div>
+                                <div class="about-one__video-btn">
+                                    <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-popup">
+                                        <i class="fa fa-play"></i>
+                                        <span class="video-popup__btn-ripple"></span>
+                                    </a>
+                                </div>
+                            </div><!-- /.about__content -->
+                        </div><!-- /.col-xl-6 -->
+                        <div class="col-xl-6">
+                            <div class="tolak-stretch-element-inside-column">
+                                <div class="about-one__image wow slideInRight">
+                                    <img src="assets/images/resources/about-1-1.jpg" alt="tolak">
+                                    <div class="about-one__image__text">
+                                        <span></span>36+ expressions challenge
+                                    </div>
+                                </div><!-- /.about__image -->
+                            </div><!-- /.tolak-stretch-element-inside-column -->
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.about-one -->
+            <section class="funfact-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="funfact-one__image">
+                                <img src="assets/images/resources/counter-1-1.jpg" alt="tolak">
+                                <img class="funfact-one__image__shape" src="assets/images/shapes/counter-border-1.png" alt="tolak">
+                                <div class="funfact-one__item count-box tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 9, "speed": 700, "scale": 1 }'>
+                                    <h3 class="funfact-one__item__count"><span class="count-text" data-stop="63" data-speed="1500"></span>k+</h3><!-- /.funfact-one__number -->
+                                    <p class="funfact-one__item__text">Successflly Trained</p><!-- /.funfact-one__title -->
+                                </div><!-- /.funfact-one__item -->
+                                <div class="funfact-one__item funfact-one__item--two count-box tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 9, "speed": 700, "scale": 1 }'>
+                                    <h3 class="funfact-one__item__count"><span class="count-text" data-stop="26" data-speed="1500"></span>k+</h3><!-- /.funfact-one__number -->
+                                    <p class="funfact-one__item__text">Projects Complited</p><!-- /.funfact-one__title -->
+                                </div><!-- /.funfact-one__item -->
+                                <div class="funfact-one__item funfact-one__item--three count-box tolak-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 9, "speed": 700, "scale": 1 }'>
+                                    <h3 class="funfact-one__item__count"><span class="count-text" data-stop="34" data-speed="1500"></span>k+</h3><!-- /.funfact-one__number -->
+                                    <p class="funfact-one__item__text">Customers Support</p><!-- /.funfact-one__title -->
+                                </div><!-- /.funfact-one__item -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="funfact-one__accordion tolak-accrodion" data-grp-name="tolak-accrodion">
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            <i class="fa fa-check-circle"></i>
+                                            Maecenas facilisis erat id odio
+                                            <span class="accrodion-title__icon"></span><!-- /.accrodion-title__icon -->
+                                        </h4>
+                                    </div><!-- /.accordian-title -->
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                There are many variations of passages of is psum available, but the majority have suffered alteration in some we form,
+                                                by injected humour,
+                                            </p>
+                                        </div><!-- /.accordian-content -->
+                                    </div>
+                                </div><!-- /.accordian-item -->
+                                <div class="accrodion active">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            <i class="fa fa-check-circle"></i>
+                                            Phasellus et vehicula nulla
+                                            <span class="accrodion-title__icon"></span><!-- /.accrodion-title__icon -->
+                                        </h4>
+                                    </div><!-- /.accordian-title -->
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                There are many variations of passages of is psum available, but the majority have suffered alteration in some we form,
+                                                by injected humour,
+                                            </p>
+                                        </div><!-- /.accordian-content -->
+                                    </div>
+                                </div><!-- /.accordian-item -->
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            <i class="fa fa-check-circle"></i>
+                                            Maecenas malesuada
+                                            <span class="accrodion-title__icon"></span><!-- /.accrodion-title__icon -->
+                                        </h4>
+                                    </div><!-- /.accordian-title -->
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                There are many variations of passages of is psum available, but the majority have suffered alteration in some we form,
+                                                by injected humour,
+                                            </p>
+                                        </div><!-- /.accordian-content -->
+                                    </div>
+                                </div><!-- /.accordian-item -->
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            <i class="fa fa-check-circle"></i>
+                                            Why you join our team
+                                            <span class="accrodion-title__icon"></span><!-- /.accrodion-title__icon -->
+                                        </h4>
+                                    </div><!-- /.accordian-title -->
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                There are many variations of passages of is psum available, but the majority have suffered alteration in some we form,
+                                                by injected humour,
+                                            </p>
+                                        </div><!-- /.accordian-content -->
+                                    </div>
+                                </div><!-- /.accordian-item -->
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            <i class="fa fa-check-circle"></i>
+                                            Maecenas malesuada
+                                            <span class="accrodion-title__icon"></span><!-- /.accrodion-title__icon -->
+                                        </h4>
+                                    </div><!-- /.accordian-title -->
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                There are many variations of passages of is psum available, but the majority have suffered alteration in some we form,
+                                                by injected humour,
+                                            </p>
+                                        </div><!-- /.accordian-content -->
+                                    </div>
+                                </div><!-- /.accordian-item -->
+                            </div>
+                        </div><!-- /.col-lg-6 -->
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.funfact-one -->
+            <!-- CTA Start -->
+            <section class="cta-two">
+                <div class="cta-two__shape" style="background-image: url(assets/images/shapes/cta-shape-1.png);"></div>
+                <div class="container">
+                    <div class="cta-two__bg" style="background-image: url(assets/images/shapes/cta-bg-2.png);">
+                        <div class="row">
+                            <div class="col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
+                                <div class="cta-two__info" style="background-image: url(assets/images/shapes/cta-2-1.jpg);">
+                                    <div class="cta-two__info__icon"><span class="icon-phone-call"></span></div>
+                                    <h4 class="cta-two__info__title">Call This Now</h4>
+                                    <p class="cta-two__info__text">
+                                        <a href="tel:025461556695">+025461556695</a>
+                                        <a href="tel:826542556455">+826542556455</a>
                                     </p>
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <div class="cta-two__content">
+                                    <h4 class="cta-two__content__title">Solution Company <a href="tel:025461556695">Call Now!</a></h4>
+                                    <p class="cta-two__content__text">We can provide you with a reliable<br> Please input an email address</p>
+                                    <a class="cta-two__content__rm" href="contact.html">Read More<span class="fas fa-angle-double-right"></span></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="cta-two__image">
+                                    <img src="assets/images/resources/cta-2-2.png" alt="tolak">
+                                </div>
+                                <a href="tel:025461556695" class="cta-two__call-text">Call Now</a>
+                            </div>
                         </div>
-                    </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
+                    </div>
                 </div>
+            </section>
+            <!-- CTA End -->
+            <section class="team-one">
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our Team Member<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Meet Great Customer Service</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="team-one__carousel tolak-owl__carousel tolak-owl__carousel--basic-nav owl-carousel" data-owl-options='{
+                "items": 1,
+                "margin": 0,
+                "loop": false,
+                "smartSpeed": 700,
+                "nav": false,
+                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                "dots": false,
+                "autoplay": false,
+                "responsive": {
+                    "0": {
+                        "items": 1
+                    },
+                    "768": {
+                        "items": 2,
+                        "margin": 30
+                    },
+                    "992": {
+                        "items": 3,
+                        "margin": 30
+                    }
+                }
+                }'>
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="Lorata Barsa">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Lorata Barsa</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Founder</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-2.jpg" alt="Moras Batas">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Moras Batas</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Manager</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-3.jpg" alt="Korata Mana">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Korata Mana</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Founder</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-1.jpg" alt="Lorata Barsa">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Lorata Barsa</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Founder</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-2.jpg" alt="Moras Batas">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Moras Batas</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Manager</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                                <div class="team-card__image">
+                                    <img src="assets/images/team/team-1-3.jpg" alt="Korata Mana">
+                                </div><!-- /.team-card__image -->
+                                <div class="team-card__content">
+                                    <div class="team-card__hover">
+                                        <div class="team-card__social">
+                                            <i class="fa fa-plus"></i>
+                                            <div class="team-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://pinterest.com">
+                                                    <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="sr-only">Pinterest</span>
+                                                </a>
+                                                <a href="https://twitter.com">
+                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                                    <span class="sr-only">Twitter</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.team-card__social__list -->
+                                        </div><!-- /.team-card__social -->
+                                    </div><!-- /.team-card__hover -->
+                                    <h3 class="team-card__title">
+                                        <a href="team-details.html">Korata Mana</a>
+                                    </h3><!-- /.team-card__title -->
+                                    <p class="team-card__designation">Founder</p><!-- /.team-card__designation -->
+                                </div><!-- /.team-card__content -->
+                            </div><!-- /.team-card -->
+                        </div><!-- /.item -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.team-one -->
+            <section class="our-solution" style="background-image: url(assets/images/backgrounds/solution-bg-1.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="our-solution__image">
+                                <div class="our-solution__border-one"></div>
+                                <div class="our-solution__border-two"></div>
+                                <img src="assets/images/resources/solution-1-1.png" alt="tolak">
+                                <div class="our-solution__border-three"></div>
+                                <div class="our-solution__image__shape"><img src="assets/images/shapes/solution-1-shape-1.png" alt="tolak"></div>
+                            </div><!-- /.our-solution__image -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="our-solution__content">
+                                <div class="sec-title text-left">
+                                    <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our Solution Business<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                                    <h3 class="sec-title__title">We’re Are Commited Deliver Marketing for Business.</h3><!-- /.sec-title__title -->
+                                </div><!-- /.sec-title -->
+                                <p class="our-solution__content__text">
+                                    Business tailored it design, management & support services business agency elit, sed do eiusmod tempor.
+                                </p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-5 col-md-4">
+                                        <div class="our-solution__box">
+                                            <div class="our-solution__box__icon"><span class="icon-social-care"></span></div>
+                                            <p class="our-solution__box__text">
+                                                THIS BEST MANS SOLUTION BEST BUSINESS FOR PROVED IS TO COMPANY
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-7 col-md-6">
+                                        <div class="our-solution__list">
+                                            <h5 class="our-solution__list__title">Solution This Business</h5>
+                                            <ul>
+                                                <li><span class="fas fa-check-circle"></span>We provide a revolutionary</li>
+                                                <li><span class="fas fa-check-circle"></span>This man for it solution.</li>
+                                                <li><span class="fas fa-check-circle"></span>We provide a revolutionary</li>
+                                                <li><span class="fas fa-check-circle"></span>This man for it solution.</li>
+                                            </ul>
+                                            <div class="our-solution__list__border"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.our-solution -->
+            <!-- Feature Start -->
+            <section class="feature-two">
+                <div class="container">
+                    <div class="row gutter-y-30">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-two__item text-center wow fadeInUp" data-wow-delay="100ms">
+                                <div class="feature-two__item__icon">
+                                    <span class="icon-cooperation"></span>
+                                </div>
+                                <h4 class="feature-two__item__title">Business Of Growth</h4>
+                                <p class="feature-two__item__text">We businesss standard chunk of Ipsum used since is Agency & Star tup.</p>
+                            </div><!-- feature-item -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-two__item feature-two__item--reverse text-center wow fadeInUp" data-wow-delay="200ms">
+                                <div class="feature-two__item__icon">
+                                    <span class="icon-ads-campaign"></span>
+                                </div>
+                                <h4 class="feature-two__item__title">We Grow Business</h4>
+                                <p class="feature-two__item__text">We businesss standard chunk of Ipsum used since is Agency & Star tup.</p>
+                            </div><!-- feature-item -->
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-two__item text-center wow fadeInUp" data-wow-delay="300ms">
+                                <div class="feature-two__item__icon">
+                                    <span class="icon-advertisig-agency"></span>
+                                </div>
+                                <h4 class="feature-two__item__title">Markting Solution</h4>
+                                <p class="feature-two__item__text">We businesss standard chunk of Ipsum used since is Agency & Star tup.</p>
+                            </div><!-- feature-item -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Feature End -->
+            <section class="project-one">
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our Projects Work<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Work Explore Satisfied Customers</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="project-one__carousel tolak-owl__carousel tolak-owl__carousel--basic-nav owl-carousel" data-owl-options='{
+                "items": 1,
+                "margin": 30,
+                "loop": false,
+                "smartSpeed": 700,
+                "nav": false,
+                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                "dots": false,
+                "autoplay": false,
+                "responsive": {
+                    "0": {
+                        "items": 1
+                    },
+                    "768": {
+                        "items": 2
+                    },
+                    "1200": {
+                        "items": 3
+                    },
+                    "1600": {
+                        "items": 4
+                    }
+                }
+                }'>
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-1.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Solution</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-2.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Business</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-3.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Marketing</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-4.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Software</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-1.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Solution</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-2.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Business</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-3.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Marketing</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="project-one__item">
+                                <div class="project-one__image">
+                                    <img src="assets/images/project/project-1-4.jpg" alt="tolak">
+                                </div>
+                                <div class="project-one__hover">
+                                    <a class="project-one__read-more" href="project-details.html"><span class="icon-right-arrow"></span></a>
+                                    <div class="project-one__hover-bottom">
+                                        <div class="project-one__cats"><a href="project.html">Software</a></div>
+                                        <h3 class="project-one__title"><a href="project-details.html">Technology website development</a></h3>
+                                    </div>
+                                </div>
+                            </div><!-- /.project-one__item -->
+                        </div><!-- /.item -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.project-one -->
+
+            <div class="client-carousel no-border">
+                <div class="container">
+                    <div class="client-carousel__one tolak-owl__carousel owl-theme owl-carousel" data-owl-options='{
+                "items": 5,
+                "margin": 30,
+                "smartSpeed": 700,
+                "loop":true,
+                "autoplay": 6000,
+                "nav":false,
+                "dots":false,
+                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                "responsive":{
+                    "0":{
+                        "items":1
+                    },
+                    "360":{
+                        "items":2
+                    },
+                    "575":{
+                        "items":3
+                    },
+                    "768":{
+                        "items":3
+                    },
+                    "992":{
+                        "items": 4
+                    },
+                    "1200":{
+                        "items": 5
+                    }
+                }
+                }'>
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                        <div class="client-carousel__one__item">
+                            <img class="client-carousel__one__item__normal" src="assets/images/resources/brand-1-1.png" alt="tolak">
+                            <img class="client-carousel__one__item__hover" src="assets/images/resources/brand-1-1-hover.png" alt="tolak">
+                        </div><!-- /.owl-slide-item-->
+                    </div><!-- /.thm-owl__slider -->
+                </div><!-- /.container -->
+            </div><!-- /.client-carousel -->
+            <section class="slide-text">
+                <div class="slide-text__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url(assets/images/backgrounds/slide-text-bg.jpg);"></div>
+                <div class="slide-text__wrap">
+                    <ul class="slide-text__list list-unstyled">
+                        <li>Service</li>
+                        <li>Technology</li>
+                        <li>Business</li>
+                        <li>Consultancy</li>
+                        <li>Support</li>
+                        <li>Management</li>
+                        <li>Design</li>
+                        <li>Development</li>
+                        <li>Service</li>
+                        <li>Technology</li>
+                        <li>Business</li>
+                        <li>Consultancy</li>
+                        <li>Support</li>
+                        <li>Management</li>
+                        <li>Design</li>
+                        <li>Development</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contact-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="contact-one__info wow fadeInLeft" data-wow-delay="100ms">
+                                <div class="contact-one__info__icon"><span class="icon-customer-service"></span></div>
+                                <h3 class="contact-one__info__title">Let’s call together just <span>contact</span> line</h3>
+                                <p class="contact-one__info__text"><a href="tel:255225551">++255225551</a>, <a href="tel:6544144444">+6544144444</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="contact-one__image wow fadeInRight" data-wow-delay="200ms">
+                                <img src="assets/images/resources/contact-1-1.png" alt="tolak">
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+                <div class="container contact-one__container wow fadeInUp" data-wow-delay="100ms">
+                    <div class="contact-one__wrapper" style="background-image: url(assets/images/shapes/contact-1-shape-1.png);">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="contact-one__image-two">
+                                    <img src="assets/images/resources/contact-1-2.jpg" alt="tolak">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="contact-one__content">
+                                    <div class="sec-title text-left">
+                                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Get In Contact<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                                        <h3 class="sec-title__title">Get free Business touch Customers me.</h3><!-- /.sec-title__title -->
+                                    </div><!-- /.sec-title -->
+                                    <p class="contact-one__content__text">
+                                        Business tailored it design, management & support services <br>business agency elit, sed do eiusmod tempor.
+                                    </p>
+                                    <form class="contact-one__form contact-form-validated form-one" action="inc/sendemail.php">
+                                        <div class="form-one__group">
+                                            <div class="form-one__control">
+                                                <input type="text" name="name" placeholder="Your Name">
+                                            </div><!-- /.form-one__control -->
+                                            <div class="form-one__control">
+                                                <input type="email" name="email" placeholder="Email address">
+                                            </div><!-- /.form-one__control -->
+                                            <div class="form-one__control form-one__control--full">
+                                                <textarea name="message" placeholder="Message"></textarea><!-- /# -->
+                                            </div><!-- /.form-one__control -->
+                                            <div class="form-one__control form-one__control--full">
+                                                <button type="submit" class="tolak-btn"><b>Send Request</b><span></span></button>
+                                            </div><!-- /.form-one__control -->
+                                        </div><!-- /.form-one__group -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </section><!-- /.contact -->
+
+            <section class="blog-one">
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <h6 class="sec-title__tagline"><span class="sec-title__tagline__left"></span>Our LArgest Blog<span class="sec-title__tagline__right"></span></h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Latest News From The Blog</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="blog-one__carousel tolak-owl__carousel tolak-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+                "items": 1,
+                "margin": 30,
+                "loop": false,
+                "smartSpeed": 700,
+                "nav": false,
+                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                "dots": false,
+                "autoplay": false,
+                "responsive": {
+                    "0": {
+                        "items": 1
+                    },
+                    "768": {
+                        "items": 2
+                    },
+                    "992": {
+                        "items": 3
+                    }
+                }
+                }'>
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Solution This Business For is Marketing Blog</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>15</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Solution This Business For is Marketing Blog</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Business Rules of Running to Web Solution</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>19</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Business Rules of Running to Web Solution</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">We Should be Descriptive This Business</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>26</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">We Should be Descriptive This Business</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Solution This Business For is Marketing Blog</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>15</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Solution This Business For is Marketing Blog</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Business Rules of Running to Web Solution</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>19</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Business Rules of Running to Web Solution</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">We Should be Descriptive This Business</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>26</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">We Should be Descriptive This Business</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <img src="assets/images/blog/blog-1-1.png" alt="Solution This Business For is Marketing Blog">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Solution This Business For is Marketing Blog</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>15</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Solution This Business For is Marketing Blog</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <img src="assets/images/blog/blog-1-2.png" alt="Business Rules of Running to Web Solution">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Business Rules of Running to Web Solution</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>19</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">Business Rules of Running to Web Solution</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                                <div class="blog-card__image">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <img src="assets/images/blog/blog-1-3.png" alt="We Should be Descriptive This Business">
+                                    <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">We Should be Descriptive This Business</span>
+                                        <!-- /.sr-only --></a>
+                                </div><!-- /.blog-card__image -->
+                                <div class="blog-card__bg"></div>
+                                <div class="blog-card__meta">
+                                    <div class="blog-card__meta__date"><span>26</span>Jun</div><!-- /.blog-card__date -->
+                                    <div class="blog-card__meta__year">2023</div><!-- /.blog-card__yarn -->
+                                    <div class="blog-card__meta__comments">
+                                        <i class="icofont-speech-comments"></i>Comments (04)
+                                    </div>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="blog-details-right.html">We Should be Descriptive This Business</a></h3><!-- /.blog-card__title -->
+                                    <p class="blog-card__text">We business standard chunk ofI nibh velit auctor aliquet sollic tudin.</p><!-- /.blog-card__text -->
+                                    <a href="blog-details-right.html" class="blog-card__link">
+                                        Read more
+                                        <i class="icofont-rounded-double-right"></i>
+                                    </a><!-- /.blog-card__link -->
+                                </div><!-- /.blog-card__content -->
+                                <div class="blog-card__border"></div>
+                            </div><!-- /.blog-card -->
+                        </div><!-- /.item -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.blog-one -->
+
+            <section class="mail-section">
+                <div class="container">
+                    <div class="mail-section__wrapper">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-4"></div>
+                            <div class="col-md-5 col-lg-3">
+                                <div class="mail-section__content">
+                                    <h3 class="mail-section__content__title">Our Newsletter</h3>
+                                    <p class="mail-section__content__text">We are dolor sit amet csectetur</p>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5">
+                                <form action="#" data-url="MAILCHIMP_FORM_URL" class="mail-section__newsletter mc-form">
+                                    <input type="text" name="EMAIL" placeholder="Enter your email">
+                                    <button type="submit" class="tolak-btn">
+                                        <b>Subscribe</b><span></span>
+                                        <span class="sr-only">Subscribe</span><!-- /.sr-only -->
+                                    </button>
+                                </form><!-- /.footer-widget__newsletter mc-form -->
+                                <div class="mc-form__response"></div><!-- /.mc-form__response -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="main-footer background-black">
+                <div class="main-footer__bg background-black" style="background-image: url(assets/images/backgrounds/footer-bg-1-1.jpg);"></div>
+                <!-- /.main-footer__bg -->
+                <div class="main-footer__shape" style="background-image: url(assets/images/shapes/footer-shape-1.png);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-widget footer-widget--about">
+                                <a href="index.html" class="footer-widget__logo">
+                                    <img src="assets/images/logo-light.png" width="184" alt="Tolak HTML Template">
+                                </a>
+                                <ul class="footer-widget__info">
+                                    <li><span class="icofont-clock-time"></span>Open Hours of Government:<br> Mon - Fri: 8.00 am. - 6.00 pm.</li>
+                                    <li><span class="icofont-location-pin"></span>13/A, Miranda Halim City .</li>
+                                    <li><span class="icofont-phone"></span><a href="tel:09969569535">099 695 695 35</a></li>
+                                </ul>
+                                <div class="footer-widget__social">
+                                    <a href="https://facebook.com">
+                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                        <span class="sr-only">Facebook</span>
+                                    </a>
+                                    <a href="https://pinterest.com">
+                                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                                        <span class="sr-only">Pinterest</span>
+                                    </a>
+                                    <a href="https://twitter.com">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                        <span class="sr-only">Twitter</span>
+                                    </a>
+                                    <a href="https://instagram.com">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                        <span class="sr-only">Instagram</span>
+                                    </a>
+                                </div>
+                                <div class="footer-widget__image">
+                                    <img src="assets/images/resources/footer-about.jpg" alt="tolak">
+                                </div>
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-widget footer-widget--posts">
+                                <h2 class="footer-widget__title">Recent Posts</h2><!-- /.footer-widget__title -->
+                                <ul class="footer-widget__posts list-unstyled">
+                                    <li class="footer-widget__posts__item">
+                                        <div class="footer-widget__posts__image">
+                                            <img src="assets/images/blog/lp-1-1.jpg" alt="">
+                                        </div><!-- /.sidebar__posts__image -->
+                                        <div class="footer-widget__posts__content">
+                                            <p class="footer-widget__posts__meta">23 jun 2023</p><!-- /.sidebar__posts__date -->
+                                            <h4 class="footer-widget__posts__title"><a href="blog-details.html">We round Solution york Blog</a></h4><!-- /.sidebar__posts__title -->
+                                        </div><!-- /.sidebar__posts__content -->
+                                    </li>
+                                    <li class="footer-widget__posts__item">
+                                        <div class="footer-widget__posts__image">
+                                            <img src="assets/images/blog/lp-1-2.jpg" alt="">
+                                        </div><!-- /.sidebar__posts__image -->
+                                        <div class="footer-widget__posts__content">
+                                            <p class="footer-widget__posts__meta">23 jun 2023</p><!-- /.sidebar__posts__date -->
+                                            <h4 class="footer-widget__posts__title"><a href="blog-details.html">We Should be Descriptive</a></h4><!-- /.sidebar__posts__title -->
+                                        </div><!-- /.sidebar__posts__content -->
+                                    </li>
+                                </ul><!-- /.sidebar__posts list-unstyled -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-lg-2">
+                            <div class="footer-widget footer-widget--links">
+                                <h2 class="footer-widget__title">Service</h2><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="about.html">Why choose us</a></li>
+                                    <li><a href="services.html">Our Service</a></li>
+                                    <li><a href="reviews.html">Partners</a></li>
+                                    <li><a href="contact.html">Core values</a></li>
+                                    <li><a href="project.html">Our projects</a></li>
+                                </ul><!-- /.list-unstyled footer-widget__links -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 col-lg-2">
+                            <div class="footer-widget footer-widget--links footer-widget--last">
+                                <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__links">
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="packages.html">Packages</a></li>
+                                    <li><a href="team.html">Team</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="blog-grid-right.html">News</a></li>
+                                </ul><!-- /.list-unstyled footer-widget__links -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+                <div class="main-footer__bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="main-footer__copyright">
+                                    &copy; Copyright <span class="dynamic-year"></span> by Tolak HTML Template.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled main-footer__bottom__list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="blog-list-right.html">News</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                </ul><!-- /.list-unstyled -->
+                            </div>
+                        </div><!-- /.main-footer__inner -->
+                    </div><!-- /.container -->
+                </div><!-- /.main-footer__bottom -->
+            </footer><!-- /.main-footer -->
+
+        </div><!-- /.page-wrapper -->
+
+
+
+        <div class="mobile-nav__wrapper">
+            <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+            <!-- /.mobile-nav__overlay -->
+            <div class="mobile-nav__content">
+                <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+                <div class="logo-box">
+                    <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="155" alt="" /></a>
+                </div>
+                <!-- /.logo-box -->
+                <div class="mobile-nav__container"></div>
+                <!-- /.mobile-nav__container -->
+
+                <ul class="mobile-nav__contact list-unstyled">
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:needhelp@tolak.com">needhelp@tolak.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone-alt"></i>
+                        <a href="tel:666-888-0000">666 888 0000</a>
+                    </li>
+                </ul><!-- /.mobile-nav__contact -->
+                <div class="mobile-nav__social">
+                    <a href="https://facebook.com">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="https://pinterest.com">
+                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                        <span class="sr-only">Pinterest</span>
+                    </a>
+                    <a href="https://twitter.com">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                    <a href="https://instagram.com">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div><!-- /.mobile-nav__social -->
             </div>
+            <!-- /.mobile-nav__content -->
         </div>
+        <!-- /.mobile-nav__wrapper -->
+        <div class="search-popup">
+            <div class="search-popup__overlay search-toggler"></div>
+            <!-- /.search-popup__overlay -->
+            <div class="search-popup__content">
+                <form role="search" method="get" class="search-popup__form" action="#">
+                    <input type="text" id="search" placeholder="Search Here..." />
+                    <button type="submit" aria-label="search submit" class="tolak-btn">
+                        <b><i class="icon-magnifying-glass"></i></b><span></span>
+                    </button>
+                </form>
+            </div>
+            <!-- /.search-popup__content -->
+        </div>
+        <!-- /.search-popup -->
+        <!-- Sidebar One Start -->
+        <aside class="sidebar-one">
+            <div class="sidebar-one__overlay"></div><!-- /.siderbar-ovarlay -->
+            <div class="sidebar-one__content">
+                <div class="sidebar-one__close"><i class="icon-close"></i></div><!-- /.siderbar-close -->
+                <div class="sidebar-one__logo">
+                    <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" alt="Tolak HTML" width="184"></a>
+                </div><!-- /.sidebar-one__logo-box -->
+                <p class="sidebar-one__text">
+                    Mauris ut enim sit amet lacus ornare ullamcor. Praesent placerat nequ
+                    puru rhoncu tincidunt odio ultrices. Sed feugiat feugiat felis.
+                </p>
+                <h4 class="sidebar-one__title">Contact Info:</h4>
+                <ul class="sidebar-one__info">
+                    <li>
+                        <span class="fas fa-map-marker-alt"></span>
+                        27, Dhaka London City Dhaka, Bangladesh
+                    </li>
+                    <li>
+                        <span class="fas fa-clock"></span>
+                        Mon - Fri: 8.00 am. - 6.00 pm.
+                    </li>
+                    <li>
+                        <span class="fas fa-envelope"></span>
+                        <a href="tel:09969569535">099 695 695 35</a>
+                    </li>
+                </ul>
+                <div class="sidebar-one__social">
+                    <a href="https://facebook.com">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="https://pinterest.com">
+                        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                        <span class="sr-only">Pinterest</span>
+                    </a>
+                    <a href="https://twitter.com">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                    <a href="https://instagram.com">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div><!-- /sidebar-one__socila -->
+                <h4 class="sidebar-one__title">Newsletter:</h4>
+                <form action="#" data-url="MAILCHIMP_FORM_URL" class="sidebar-one__newsletter mc-form">
+                    <input type="text" name="EMAIL" placeholder="Email address">
+                    <button type="submit" class="fas fa-paper-plane">
+                        <span class="sr-only">submit</span><!-- /.sr-only -->
+                    </button>
+                </form><!-- /.footer-widget__newsletter mc-form -->
+            </div><!-- /.sidebar__content -->
+        </aside>
+        <!-- Sidebar One Start -->
+
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+            <span class="scroll-to-top__text">back top</span>
+            <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+        </a>
+
+
+        <script src="{{ asset('assets/vendors/jquery/jquery-3.7.0.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/bootstrap-select/bootstrap-select.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jarallax/jarallax.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-ui/jquery-ui.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/nouislider/nouislider.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/tiny-slider/tiny-slider.js') }}"></script>
+        <script src="{{ asset('assets/vendors/wnumb/wNumb.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/owl-carousel/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/wow/wow.js') }}"></script>
+        <script src="{{ asset('assets/vendors/tilt/tilt.jquery.js') }}"></script>
+        <script src="{{ asset('assets/vendors/simpleParallax/simpleParallax.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/imagesloaded/imagesloaded.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/isotope/isotope.js') }}"></script>
+        <script src="{{ asset('assets/vendors/countdown/countdown.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-circleType/jquery.circleType.js') }}"></script>
+        <script src="{{ asset('assets/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
+        <script src="{{ asset('assets/vendors/progress-bar/knob.js') }}"></script>
+
+        <!-- chart js -->
+        <script src="{{ asset('assets/vendors/chart/chart.js') }}"></script>
+        <script src="{{ asset('assets/vendors/chart/custome-chart.js') }}"></script>
+
+        <!-- template js -->
+        <script src="{{ asset('assets/js/tolak.js') }}"></script>
     </body>
 </html>

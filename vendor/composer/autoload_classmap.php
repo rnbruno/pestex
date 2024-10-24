@@ -10,6 +10,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Livewire\\Actions\\Logout' => $baseDir . '/app/Livewire/Actions/Logout.php',
     'App\\Livewire\\Forms\\LoginForm' => $baseDir . '/app/Livewire/Forms/LoginForm.php',
+    'App\\Models\\Contact' => $baseDir . '/app/Models/Contact.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\VoltServiceProvider' => $baseDir . '/app/Providers/VoltServiceProvider.php',
